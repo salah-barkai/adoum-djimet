@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+
+        }
+        header {
+            margin: 0px;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            background: black;
+            color: white;
+        }
+
+        h1{
+            font-size: 25px;
+            font-weight: bold;
+            padding: 10px;
+            margin: 10px;
+
+        }
+
+        nav{
+            display: flex;
+            margin: auto;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+
+        }
+
+        ul {
+            display: flex;
+            list-style: none;
+            padding: 5px;
+            justify-content: space-around;
+            margin-left: 800px;
+        }
+
+        li {
+            justify-content: space-around;
+            padding: 5px;
+            margin: 10px;
+            cursor: pointer;
+        }
+
+        .burger{
+            padding: 7px;
+            margin: 13px;
+            cursor: pointer;
+            display: none;
+        }
+
+        .trois {
+            margin: 5px;
+            width: 30px;
+            height: 3px;
+            background: black;
+        }
+
+         @media only screen and (max-width: 890px) {
+            header {
+                padding: 0px 50px;
+            }
+
+            nav ul {
+                display: none;
+                flex-direction: column;
+                background-color: whitesmoke;
+                height: 100%;
+                width: 100%;
+                padding: auto;
+                margin: auto;
+                overflow: auto;
+                opacity: 1;
+                transition: ease 2.0;
+            }
+
+            nav.show {
+                display: flex;
+                flex-direction: row; /* Ajout de cette ligne pour afficher en flex row */
+            }
+
+
+            .burger {
+                display: block;
+
+            }
+
+            .trois {
+                background-color: white;
+
+            }
+
+            .burger:hover + nav ul {
+                display: inline-block;
+
+
+            }
+
+        }
+
+        @media only screen and (max-width: 593px) {
+            header {
+                padding: 0px 30px;
+            }
+
+            nav ul {
+                padding: 0px 30px;
+            }
+
+            nav.show {
+            display: flex;
+            flex-direction: row; /* Ajout de cette ligne pour afficher en flex row */
+             }
+
+
+            .burger {
+                color: white;
+                display: block;
+
+            }
+              }
+
+        .formu {
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            margin: auto;
+
+        }
+
+        .formu h1{
+            text-align: center;
+            align-items: center;
+            font-family: monospace;
+            font-weight: 'bold';
+        }
+
+
+        .formu form {
+            display: inline-block;
+            padding: 35px;
+        }
+
+        form input {
+            padding: 10px;
+            margin: 20px;
+            border-style: none;
+            border-radius: 10px;
+            display: flex;
+            flex-wrap: 3;
+            width: 320px;
+        }
+
+        form textarea {
+            padding: 10px;
+            margin: 20px;
+            border-style: none;
+            border-radius: 10px;
+            display: flex;
+            flex-wrap: 3;
+            width: 320px;
+            height: 150px;
+        }
+
+        .btn {
+            text-align: center;
+            align-items: center;
+            background-color: skyblue;
+            justify-content: center;
+            margin: 20px;
+            cursor: pointer;
+        }
+
+
+        footer {
+            margin: 10px;
+            padding: 20px;
+            flex-wrap: 3;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+        }
+
+        .footer{
+            background-color: black;
+            color: whitesmoke;
+            padding: 20px;
+        }
+
+        h2{
+            margin: 20px;
+            justify-content: center;
+            padding: 10px;
+
+        }
+
+        .contact {
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin: 15px;
+            display: flex;
+            flex-wrap: 3;
+            padding: 20px;
+            background-color:'whitesmoke';
+            border-radius: 10px;
+            width: auto;
+        }
+
+        .contact p{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin: auto;
+            padding: 10px;
+
+        }
+
+        ion-icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin: auto;
+            padding: 10px;
+            font-size: 40px;
+            cursor: pointer;
+        }
+
+        ion-icon:hover {
+            background-color: whitesmoke;
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Adoum djimet</h1>
+        <nav>
+            <ul>
+                <li id="acceuil">Acceuil</li>
+                <li id="contact">Contact</li>
+                <li id="info">Activités</li>
+            </ul>
+        </nav>
+        <div class="burger">
+            <div class="trois"></div>
+            <div class="trois"></div>
+            <div class="trois"></div>
+        </div>
+    </header>
+    <h2>Mes Réseaux Sociaux</h2>
+    <div class="contact">
+      <p>Facebook</p>
+      <p>Instagram</p>
+      <p>Twitter</p>
+      <p>Email</p>
+      <br>
+    </div>
+    <div class="contact">
+       <ion-icon name="logo-facebook"></ion-icon>
+       <ion-icon name="logo-instagram"></ion-icon>
+       <ion-icon name="logo-twitter"></ion-icon>
+       <ion-icon name="mail-outline"></ion-icon>
+    </div>
+
+    <div class="formu">
+        <h1>Formulaire de contact</h1>
+        <form>
+            <input type="text" name="Nom" placeholder="Nom">
+            <input type="text" name="Prenom" placeholder="Prenom">
+            <input type="text" name="email" placeholder="Email">
+            <textarea wrap="3" placeholder="Messages"></textarea>
+            <input type="submit" name="Envoyez" class="btn">
+        </form>
+    </div>
+
+
+
+    <div class="footer">
+        <footer><p>Tous les droits sont réservés.</p><br>
+         <p>Copyright-2024</p>
+       </footer> 
+    </div>
+    
+    <!-- Your content goes here -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+
+    <!-- Your content goes here -->
+
+    <script>
+        const burger = document.querySelector('.burger');
+        const nav = document.querySelector('nav ul');
+        const Acceuil = document.querySelector('Acceuil');
+        var contact= document.querySelector('.contact');
+        var info= document.querySelector('#info');
+
+
+        burger.addEventListener('click', () => {
+            nav.classList.toggle('show')
+        })
+
+        acceuil.addEventListener('click', () =>{
+            window.location.href ='./index.html';
+        });
+
+        contact.addEventListener('click', () =>{
+            window.location.href='./contact.html';
+        });
+
+        info.addEventListener('click', ()=> {
+            window.location.href = 'activité.html';
+        });
+
+
+
+        
+
+
+
+            
+    </script>
+</body>
+</html>

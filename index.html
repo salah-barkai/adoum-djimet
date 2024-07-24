@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+
+        }
+        header {
+            margin: 0px;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            background: black;
+            color: white;
+        }
+
+        h1{
+            font-size: 25px;
+            font-weight: bold;
+            padding: 10px;
+            margin: 10px;
+
+        }
+
+        nav{
+            display: flex;
+            margin: auto;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            height: 100%;
+
+        }
+
+        ul {
+            display: flex;
+            list-style: none;
+            padding: 5px;
+            justify-content: space-around;
+            margin-left: 800px;
+        }
+
+        li {
+            justify-content: space-around;
+            padding: 5px;
+            margin: 10px;
+            cursor: pointer;
+        }
+
+        .burger{
+            padding: 7px;
+            margin: 13px;
+            cursor: pointer;
+            display: none;
+        }
+
+        .trois {
+            margin: 5px;
+            width: 30px;
+            height: 3px;
+            background: black;
+        }
+
+         @media only screen and (max-width: 890px) {
+            header {
+                padding: 0px 50px;
+            }
+
+            nav ul {
+                display: none;
+                flex-direction: column;
+                background-color: whitesmoke;
+                height: 100%;
+                width: 100%;
+                padding: auto;
+                margin: auto;
+                overflow: auto;
+                opacity: 1;
+                transition: ease 2.0;
+            }
+
+            nav.show {
+                display: flex;
+                flex-direction: row; /* Ajout de cette ligne pour afficher en flex row */
+            }
+
+
+            .burger {
+                display: block;
+
+            }
+
+            .trois {
+                background-color: white;
+
+            }
+
+            .burger:hover + nav ul {
+                display: inline-block;
+
+
+            }
+
+            .Bienvenue{
+                padding: 0px 30px;
+                display: inline-block;
+
+            }
+            .Bienvenue h1{
+                padding: 0px 30px;
+
+            }
+
+            .Bienvenue p{
+                padding: 0px 30px;
+            }
+
+            .Bienvenue img {  
+              margin: 5px;
+              padding: 10px;
+              width: 110px;              
+            }
+
+            iframe {
+            padding: 10px;
+            height: 340px;
+            border-style: none;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+
+        }
+        }
+
+
+
+        @media only screen and (max-width: 593px) {
+            header {
+                padding: 0px 30px;
+            }
+
+            nav ul {
+                padding: 0px 30px;
+            }
+
+            nav.show {
+            display: flex;
+            flex-direction: row; /* Ajout de cette ligne pour afficher en flex row */
+             }
+
+
+            .burger {
+                color: white;
+                display: block;
+
+            }
+
+            .Bienvenue{
+                padding: 0px 30px;
+                display: inline-block;
+
+            }
+            .Bienvenue h1{
+                padding: 0px 30px;
+
+            }
+
+            .Bienvenue p{
+                padding: 0px 30px;
+            }
+
+            iframe {
+            padding: 10px;
+            height: 340px;
+            border-style: none;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        }
+
+        .Bienvenue {
+            margin:10px;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            flex-wrap: 3;
+        }
+
+        .Bienvenue h1{
+            margin: auto;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            display: none;
+
+        }
+
+        .Bienvenue img{
+            margin: 10px;
+            text-align: center;
+            align-content: center;
+            border-radius: 50%;
+            width: 300px;
+            border-width: 1px;
+            border-color: 'whitesmoke';
+            margin: 50px;
+            padding: 10px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .Bienvenue p {
+            text-align: center;
+            align-items: center;
+            font-size: 18px;
+            font-family: monospace;
+        }
+        .contact p{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin: auto;
+            padding: 10px;
+
+        }
+        h2{
+            margin: 20px;
+            justify-content: center;
+            padding: 10px;
+
+        }
+
+        .contact {
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin: 15px;
+            display: flex;
+            flex-wrap: 3;
+            padding: 20px;
+            background-color:'whitesmoke';
+            border-radius: 10px;
+            width: auto;
+        }
+        .scolaire p {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin: auto;
+            padding: 10px;
+        }
+        .scolaire  {
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin: 15px;
+            display: flex;
+            flex-wrap: 3;
+            padding: 20px;
+            background-color:'whitesmoke';
+            border-radius: 10px;
+            width: auto;
+        }
+
+        h3 {
+            margin: 20px;
+            justify-content: center;
+            padding: 10px;
+        }
+
+        .bienvenue2{
+            margin: 10px;
+            padding: 10px;
+        }
+
+        .bienvenue2 p{
+            text-align: center;
+            align-items: center;
+            font-size: 18px;
+            font-family: monospace;
+            font-weight: bold;
+        }
+
+        footer {
+            margin: 10px;
+            padding: 20px;
+            flex-wrap: 3;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+        }
+
+        .footer{
+            background-color: black;
+            color: whitesmoke;
+            padding: 20px;
+        }
+        h4 {
+            margin: 30px;
+            padding: 10px;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+        }
+
+        .blogs {
+            margin: 10px;
+            padding: 20px;
+        }
+
+        .articles img {
+            width: 250px;
+            height: 340px;
+            border-radius: 20px;
+        }
+
+        .articles p {
+            font-size: 15px;
+            font-family: monospace;
+            box-sizing: content-box;
+            margin: 20px;
+        }
+
+        .articles {
+            display: flex;
+            flex-wrap: 3;
+            border-style: 1px solid;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        iframe {
+            padding: 10px;
+            height: 340px;
+            border-style: none;
+            cursor: pointer;
+            flex: 1 1 30%; 
+        }
+
+        ion-icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin: auto;
+            padding: 10px;
+            font-size: 40px;
+            cursor: pointer;
+        }
+
+        ion-icon:hover {
+            background-color: whitesmoke;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Adoum djimet</h1>
+        <nav>
+            <ul>
+                <li id="Acceuil">Acceuil</li>
+                <li id="contact">Contacts</li>
+                <li id="info">Activités</li>
+            </ul>
+        </nav>
+        <div class="burger" onclick="toggleNav()">
+            <div class="trois"></div>
+            <div class="trois"></div>
+            <div class="trois"></div>
+        </div>
+    </header>
+    <div class="Bienvenue">
+      <img src="adoum.JPG">
+      <p>Poste Actuel: Directeur General de L'Adetic</p> 
+    </div>
+    <div class="bienvenue2"><p>Soyez le bienvenue sur mon site, n'hésitez pas a me contact si besoin.</p></div>
+    <h2>Mes Réseaux Sociaux</h2>
+    <div class="contact">
+      <p>Facebook</p>
+      <p>Instagram</p>
+      <p>Twitter</p>
+      <p>Email</p>
+      <br>
+    </div>
+    <div class="contact">
+       <ion-icon name="logo-facebook"></ion-icon>
+       <ion-icon name="logo-instagram"></ion-icon>
+       <ion-icon name="logo-twitter"></ion-icon>
+       <ion-icon name="mail-outline"></ion-icon>
+    </div>
+
+
+    <h3>Mes Qualification Scolaire</h3>
+    <div class="scolaire">
+       <p>Master en Science économiques</p>
+       <p>MBA a l'école de Paris en France</p>
+       <p>Master 2 en Régulation Numérique</p>
+    </div>
+    <div class="contact">
+       <ion-icon name="school-outline"></ion-icon>
+       <ion-icon name="school-outline"></ion-icon>
+       <ion-icon name="school-outline"></ion-icon>
+    </div>
+    <h4>Activités Marquantes</h4>
+        <div class="blogs">
+        <div class="articles">
+           <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FAdetic.td%2Fposts%2Fpfbid02ziMeNdjzXMXCgdVqiEEeeP42AkTsEDFQrjLm2bDcP5AgwMPq8Z9CVY2JoLSCvCaAl&show_text=true&width=500" width="500" height="250" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+
+           <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FAdetic.td%2Fposts%2Fpfbid05553gpMhnzhZkw8KtNExdCPgWgXRDMLiUkjvX3fSyvYUxUE6YPCpzgC8itWehEf4l&show_text=true&width=500" width="500" height="250" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+
+           <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FAdetic.td%2Fposts%2Fpfbid02btjHM4iQqxs1MUpXgPw2LX3cWJpxPzVuVigDGvrzFQJ1CNzE8KHtz1eXLUkUQYtpl&show_text=true&width=500" width="500" height="250" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+        </div>
+    </div>
+    <div class="footer">
+        <footer><p>Tous les droits sont réservés.</p><br>
+         <p>Copyright-2024</p>
+       </footer> 
+    </div>
+    
+
+
+
+    <!-- Your content goes here -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <script>
+        const burger = document.querySelector('#burger');
+        const nav = document.querySelector('nav');
+        const acceuil = document.querySelector('#Acceuil');
+        const contact= document.querySelector('#contact');
+        const info= document.querySelector('#info');
+
+
+        function toggleNav() {
+        var nav = document.querySelector('nav');
+        nav.classList.toggle('show')
+        };
+
+        acceuil.addEventListener('click', () =>{
+            window.location.href = './index.html';
+          });
+
+
+        contact.addEventListener('click', () =>{
+            window.location.href = './contact.html';
+        });
+
+        info.addEventListener('click', () =>{
+            window.location.href='./activité.html';
+        });
+
+
+
+
+
+            
+    </script>
+</body>
+</html>

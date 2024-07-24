@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+
+        }
+        header {
+            margin: 0px;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            background: black;
+            color: white;
+        }
+
+        h1{
+            font-size: 25px;
+            font-weight: bold;
+            padding: 10px;
+            margin: 10px;
+
+        }
+
+        nav{
+            display: flex;
+            margin: auto;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+
+        }
+
+        ul {
+            display: flex;
+            list-style: none;
+            padding: 5px;
+            justify-content: space-around;
+            margin-left: 800px;
+        }
+
+        li {
+            justify-content: space-around;
+            padding: 5px;
+            margin: 10px;
+            cursor: pointer;
+        }
+
+        .burger{
+            padding: 7px;
+            margin: 13px;
+            cursor: pointer;
+            display: none;
+        }
+
+        .trois {
+            margin: 5px;
+            width: 30px;
+            height: 3px;
+            background: black;
+        }
+
+@media only screen and (max-width: 890px) {
+            header {
+                padding: 0px 50px;
+            }
+
+            nav ul {
+                display: none;
+                flex-direction: column;
+                background-color: whitesmoke;
+                height: 100%;
+                width: 100%;
+                padding: auto;
+                margin: auto;
+                overflow: auto;
+                opacity: 1;
+                transition: ease 2.0;
+            }
+
+            nav.show {
+                display: flex;
+                flex-direction: row; /* Ajout de cette ligne pour afficher en flex row */
+            }
+
+
+            .burger {
+                display: block;
+
+            }
+
+            .trois {
+                background-color: white;
+
+            }
+
+            .burger:hover + nav ul {
+                display: inline-block;
+
+
+            }
+
+            .blogs {
+                display: flex;
+                box-sizing: content-box;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+
+            }
+
+            .articles iframe {
+                padding: 10px;
+                width: 300px;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                font-size: -10%;
+
+            }
+
+        }
+
+        @media only screen and (max-width: 593px) {
+            header {
+                padding: 0px 30px;
+            }
+
+            nav ul {
+                padding: 0px 30px;
+            }
+
+            nav.show {
+            display: flex;
+            flex-direction: row; /* Ajout de cette ligne pour afficher en flex row */
+             }
+
+
+            .burger {
+                color: white;
+                display: block;
+
+            }
+              }
+
+
+
+       h4 {
+            margin: 30px;
+            padding: 10px;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+        }
+
+        .blogs {
+            margin: 10px;
+            padding: 20px;
+        }
+
+        .articles img {
+            width: 250px;
+            height: 340px;
+            border-radius: 20px;
+        }
+
+        .articles p {
+            font-size: 15px;
+            font-family: monospace;
+            box-sizing: content-box;
+            margin: 20px;
+        }
+
+        .articles {
+            display: flex;
+            flex-wrap: 3;
+            border-style: 1px solid;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        iframe {
+            padding: 10px;
+            height: 340px;
+            border-style: none;
+            cursor: pointer;
+            display: flex;
+            flex-wrap: 3; 
+        }
+
+        footer {
+            margin: 10px;
+            padding: 20px;
+            flex-wrap: 3;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+        }
+
+        .footer{
+            background-color: black;
+            color: whitesmoke;
+            padding: 20px;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Adoum djimet</h1>
+        <nav>
+            <ul>
+                <li id="acceuil">Acceuil</li>
+                <li id="contact">Contact</li>
+                <li id="info">Activités</li>
+            </ul>
+        </nav>
+        <div class="burger">
+            <div class="trois"></div>
+            <div class="trois"></div>
+            <div class="trois"></div>
+        </div>
+    </header>
+
+        <h4>Activités Marquantes</h4>
+        <div class="blogs">
+        <div class="articles">
+
+            <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FAdetic.td%2Fposts%2Fpfbid0rd5gVkuUuvTsMEnwyUDPXagn2BnhZZ7tUMDmK5sXJJHzNWqxmRBudeoeQBHy8WMKl&show_text=true&width=500" width="500" height="250" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+
+            <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FAdetic.td%2Fposts%2Fpfbid036breQNoFXvHPCqWUtQ1U8srJASJ81hKyuCGYA35ibqCo1prnpBB5jRCT7uaKiR2bl&show_text=true&width=500" width="500" height="250" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+
+
+           <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FAdetic.td%2Fposts%2Fpfbid05553gpMhnzhZkw8KtNExdCPgWgXRDMLiUkjvX3fSyvYUxUE6YPCpzgC8itWehEf4l&show_text=true&width=500" width="500" height="250" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe> <br>
+
+           <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FAdetic.td%2Fposts%2Fpfbid02btjHM4iQqxs1MUpXgPw2LX3cWJpxPzVuVigDGvrzFQJ1CNzE8KHtz1eXLUkUQYtpl&show_text=true&width=500" width="500" height="250" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+        </div>
+        <div class="articles">
+            <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FAdetic.td%2Fposts%2Fpfbid0n4geALLDAoZ8KZbymW2H3ydvnZZ6baXvEd9xcR2SHZed4KERmY4wrPLLX8te2nqol&show_text=true&width=500" width="500" height="250" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe> <br>
+
+            <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FAdetic.td%2Fposts%2Fpfbid02WmgKZ3UXWxJnpHkb6cRepPfXKHxjRba8sB8zgotgLhbSc4tUbvjWc8dY6eaVxdSAl&show_text=true&width=500" width="500" height="793" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+
+           <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FAdetic.td%2Fposts%2Fpfbid02ziMeNdjzXMXCgdVqiEEeeP42AkTsEDFQrjLm2bDcP5AgwMPq8Z9CVY2JoLSCvCaAl&show_text=true&width=500" width="500" height="250" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+        </div>
+    </div>
+
+
+
+    <div class="footer">
+        <footer><p>Tous les droits sont réservés.</p><br>
+         <p>Copyright-2024</p>
+       </footer> 
+    </div>
+    
+
+
+
+    <!-- Your content goes here -->
+
+    <script>
+        const burger = document.querySelector('.burger');
+        const nav = document.querySelector('nav ul');
+        const Acceuil = document.querySelector('Acceuil');
+
+        burger.addEventListener('click', () => {
+            nav.classList.toggle('show')
+        })
+
+
+        const contact= document.querySelector('#contact');
+        const info= document.querySelector('#info');
+
+
+        burger.addEventListener('click', () => {
+            nav.classList.toggle('show')
+        })
+
+        acceuil.addEventListener('click', () =>{
+            window.location.href ='./index.html';
+        });
+
+        contact.addEventListener('click', () =>{
+            window.location.href='./contact.html';
+        });
+
+        info.addEventListener('click', () =>{
+            window.location.href='./activité.html';
+        });
+
+
+            
+    </script>
+</body>
+</html>
