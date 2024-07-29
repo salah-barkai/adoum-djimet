@@ -8,6 +8,7 @@
             padding: 0px;
             margin: 0px;
             box-sizing: border-box;
+            user-select: none;
 
         }
         header {
@@ -34,6 +35,7 @@
             align-items: center;
             padding: 10px;
             height: 100%;
+            color: white;
 
         }
 
@@ -74,20 +76,30 @@
             nav ul {
                 display: none;
                 flex-direction: column;
-                background-color: whitesmoke;
-                height: 100%;
+                width: 100%;
+                background-color: black;
+                color: white;
+            }
+
+            nav.show ul {
+                display: flex;
+                color: white;
+            }
+
+
+
+            nav.show {
+                display: inline-block;
                 width: 100%;
                 padding: auto;
                 margin: auto;
                 overflow: auto;
                 opacity: 1;
                 transition: ease 2.0;
-            }
+                background-color: black;
+                color: white;
+    }
 
-            nav.show {
-                display: flex;
-                flex-direction: row; /* Ajout de cette ligne pour afficher en flex row */
-            }
 
 
             .burger {
@@ -108,7 +120,9 @@
 
             .Bienvenue{
                 padding: 0px 30px;
-                display: inline-block;
+                display: flex;
+                flex-direction: column;
+                margin: 10px;
 
             }
             .Bienvenue h1{
@@ -122,19 +136,19 @@
 
             .Bienvenue img {  
               margin: 5px;
-              padding: 10px;
-              width: 110px;              
+              padding: 0px 30px;
+              justify-content: center;
+
             }
 
-            iframe {
-            padding: 10px;
-            height: 340px;
-            border-style: none;
+            .articles {
             cursor: pointer;
             display: flex;
-            flex-direction: column;
+            flex-direction: column;}
 
-        }
+            iframe {
+               width: 400px;
+            }
         }
 
 
@@ -145,13 +159,24 @@
             }
 
             nav ul {
-                padding: 0px 30px;
+                display: none;
+                flex-direction: column;
+                color: white;
             }
 
             nav.show {
-            display: flex;
-            flex-direction: row; /* Ajout de cette ligne pour afficher en flex row */
-             }
+                display: inline-block;
+                height: 100%;
+                width: 100%;
+                padding: auto;
+                margin: auto;
+                overflow: auto;
+                opacity: 1;
+                transition: ease 2.0;
+                background-color: black;
+                color: white;
+    }
+
 
 
             .burger {
@@ -160,9 +185,11 @@
 
             }
 
-            .Bienvenue{
+.Bienvenue{
                 padding: 0px 30px;
-                display: inline-block;
+                display: flex;
+                flex-direction: column;
+                margin: 10px;
 
             }
             .Bienvenue h1{
@@ -174,15 +201,21 @@
                 padding: 0px 30px;
             }
 
-            iframe {
-            padding: 10px;
-            height: 340px;
-            border-style: none;
+            .Bienvenue img {  
+              margin: 5px;
+              padding: 0px 30px;
+              justify-content: center;
+
+            }
+
+            .articles {
             cursor: pointer;
             display: flex;
-            flex-direction: column;
+            flex-direction: column;}
 
-        }
+            iframe {
+               width: 280px;
+            }
 
         }
 
@@ -376,7 +409,7 @@
                 <li id="info">Activités</li>
             </ul>
         </nav>
-        <div class="burger" onclick="toggleNav()">
+        <div class="burger" id="burger">
             <div class="trois"></div>
             <div class="trois"></div>
             <div class="trois"></div>
@@ -438,17 +471,16 @@
    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
     <script>
-        const burger = document.querySelector('#burger');
+        const burger = document.querySelector('.burger');
         const nav = document.querySelector('nav');
         const acceuil = document.querySelector('#Acceuil');
         const contact= document.querySelector('#contact');
         const info= document.querySelector('#info');
 
-
-        function toggleNav() {
-        var nav = document.querySelector('nav');
-        nav.classList.toggle('show')
-        };
+        burger.addEventListener('click', ()=>{
+            nav.classList.toggle('show');
+        });
+        
 
         acceuil.addEventListener('click', () =>{
             window.location.href = './index.html';
