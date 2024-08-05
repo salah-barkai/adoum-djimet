@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        *{
+        * {
             padding: 0px;
             margin: 0px;
             box-sizing: border-box;
             user-select: none;
-
         }
+
         header {
             margin: 0px;
             padding: 10px;
@@ -20,15 +20,14 @@
             color: white;
         }
 
-        h1{
+        h1 {
             font-size: 25px;
             font-weight: bold;
             padding: 10px;
             margin: 10px;
-
         }
 
-        nav{
+        nav {
             display: flex;
             margin: auto;
             justify-content: center;
@@ -36,7 +35,6 @@
             padding: 10px;
             height: 100%;
             color: white;
-
         }
 
         ul {
@@ -54,7 +52,7 @@
             cursor: pointer;
         }
 
-        .burger{
+        .burger {
             padding: 7px;
             margin: 13px;
             cursor: pointer;
@@ -68,175 +66,158 @@
             background: black;
         }
 
-         @media only screen and (max-width: 890px) {
+        @media only screen and (max-width: 890px) {
             header {
                 padding: 0px 50px;
             }
 
-            nav ul {
-                display: none;
-                flex-direction: column;
-                width: 100%;
-                background-color: black;
-                color: white;
-            }
+            /* Styles for nav ul */
+                nav ul {
+                    display: none; /* Caché par défaut sur les petits écrans */
+                    flex-direction: column;
+                    background-color: black;
+                    width: 100%;
+                    margin: 0;
+                    color: white;
+                    /* Réinitialiser les marges */
+                }
 
-            nav.show ul {
-                display: flex;
-                color: white;
-            }
+                nav.show ul {
+                    display: flex; 
+                    opacity: 1;
+                    height: 100%;
+                    padding: 100px; 
+                    background-color: black;
+                    /* Afficher lorsque la classe 'show' est active */
+                }
 
-
-
-            nav.show {
-                display: inline-block;
-                width: 100%;
-                padding: auto;
-                margin: auto;
-                overflow: auto;
-                opacity: 1;
-                transition: ease 2.0;
-                background-color: black;
-                color: white;
-    }
 
 
 
             .burger {
                 display: block;
-
             }
 
             .trois {
                 background-color: white;
-
             }
 
-            .burger:hover + nav ul {
-                display: inline-block;
-
-
-            }
-
-            .Bienvenue{
+            .Bienvenue {
                 padding: 0px 30px;
                 display: flex;
                 flex-direction: column;
                 margin: 10px;
-
-            }
-            .Bienvenue h1{
-                padding: 0px 30px;
-
             }
 
-            .Bienvenue p{
+            .Bienvenue h1 {
                 padding: 0px 30px;
             }
 
-            .Bienvenue img {  
-              margin: 5px;
-              padding: 0px 30px;
-              justify-content: center;
+            .Bienvenue p {
+                padding: 0px 30px;
+            }
 
+            .Bienvenue img {
+                margin: 5px;
+                padding: 0px 30px;
+                justify-content: center;
             }
 
             .articles {
-            cursor: pointer;
-            display: flex;
-            flex-direction: column;}
+                cursor: pointer;
+                display: flex;
+                flex-direction: column;
+            }
 
             iframe {
-               width: 400px;
+                width: 400px;
             }
         }
-
-
 
         @media only screen and (max-width: 593px) {
             header {
                 padding: 0px 30px;
             }
 
+            /* Styles for nav ul */
             nav ul {
-                display: none;
-                flex-direction: column;
-                color: white;
-            }
+                    display: none; /* Caché par défaut sur les petits écrans */
+                    flex-direction: column;
+                    background-color: black;
+                    width: 100%;
+                    margin: 0;
+                    color: white;
+                    /* Réinitialiser les marges */
+                }
 
-            nav.show {
-                display: inline-block;
-                height: 100%;
-                width: 100%;
-                padding: auto;
-                margin: auto;
-                overflow: auto;
-                opacity: 1;
-                transition: ease 2.0;
-                background-color: black;
-                color: white;
-    }
+                nav.show ul {
+                    display: flex; 
+                    opacity: 1;
+                    height: 100%;
+                    padding: 100px; 
+                    background-color: black;
+                    /* Afficher lorsque la classe 'show' est active */
+                }
 
 
+
+
+             
 
             .burger {
                 color: white;
                 display: block;
-
             }
 
-.Bienvenue{
+            .Bienvenue {
                 padding: 0px 30px;
                 display: flex;
                 flex-direction: column;
                 margin: 10px;
-
-            }
-            .Bienvenue h1{
-                padding: 0px 30px;
-
             }
 
-            .Bienvenue p{
+            .Bienvenue h1 {
                 padding: 0px 30px;
             }
 
-            .Bienvenue img {  
-              margin: 5px;
-              padding: 0px 30px;
-              justify-content: center;
+            .Bienvenue p {
+                padding: 0px 30px;
+            }
 
+            .Bienvenue img {
+                margin: 5px;
+                padding: 0px 30px;
+                justify-content: center;
             }
 
             .articles {
-            cursor: pointer;
-            display: flex;
-            flex-direction: column;}
-
-            iframe {
-               width: 280px;
+                cursor: pointer;
+                display: flex;
+                flex-direction: column;
             }
 
+            iframe {
+                width: 280px;
+            }
         }
 
         .Bienvenue {
-            margin:10px;
+            margin: 10px;
             justify-content: center;
             align-items: center;
             display: flex;
             flex-wrap: 3;
         }
 
-        .Bienvenue h1{
+        .Bienvenue h1 {
             margin: auto;
             align-items: center;
             justify-content: center;
             text-align: center;
             display: none;
-
         }
 
-        .Bienvenue img{
+        .Bienvenue img {
             margin: 10px;
             text-align: center;
             align-content: center;
@@ -256,20 +237,20 @@
             font-size: 18px;
             font-family: monospace;
         }
-        .contact p{
+
+        .contact p {
             display: flex;
             justify-content: center;
             align-items: center;
             text-align: center;
             margin: auto;
             padding: 10px;
-
         }
-        h2{
+
+        h2 {
             margin: 20px;
             justify-content: center;
             padding: 10px;
-
         }
 
         .contact {
@@ -280,10 +261,11 @@
             display: flex;
             flex-wrap: 3;
             padding: 20px;
-            background-color:'whitesmoke';
+            background-color: 'whitesmoke';
             border-radius: 10px;
             width: auto;
         }
+
         .scolaire p {
             display: flex;
             justify-content: center;
@@ -292,7 +274,8 @@
             margin: auto;
             padding: 10px;
         }
-        .scolaire  {
+
+        .scolaire {
             justify-content: center;
             align-items: center;
             text-align: center;
@@ -300,7 +283,7 @@
             display: flex;
             flex-wrap: 3;
             padding: 20px;
-            background-color:'whitesmoke';
+            background-color: 'whitesmoke';
             border-radius: 10px;
             width: auto;
         }
@@ -311,12 +294,12 @@
             padding: 10px;
         }
 
-        .bienvenue2{
+        .bienvenue2 {
             margin: 10px;
             padding: 10px;
         }
 
-        .bienvenue2 p{
+        .bienvenue2 p {
             text-align: center;
             align-items: center;
             font-size: 18px;
@@ -333,11 +316,12 @@
             align-items: center;
         }
 
-        .footer{
+        .footer {
             background-color: black;
             color: whitesmoke;
             padding: 20px;
         }
+
         h4 {
             margin: 30px;
             padding: 10px;
@@ -377,7 +361,7 @@
             height: 340px;
             border-style: none;
             cursor: pointer;
-            flex: 1 1 30%; 
+            flex: 1 1 30%;
         }
 
         ion-icon {
@@ -397,6 +381,7 @@
 
 
 
+
     </style>
 </head>
 <body>
@@ -404,12 +389,12 @@
         <h1>Adoum djimet</h1>
         <nav>
             <ul>
-                <li id="Acceuil">Acceuil</li>
-                <li id="contact">Contacts</li>
+                <li id="acceuil">Acceuil</li>
+                <li id="contact">Contact</li>
                 <li id="info">Activités</li>
             </ul>
         </nav>
-        <div class="burger" id="burger">
+        <div class="burger">
             <div class="trois"></div>
             <div class="trois"></div>
             <div class="trois"></div>
@@ -469,11 +454,13 @@
     <!-- Your content goes here -->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+       <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
 
     <script>
         const burger = document.querySelector('.burger');
         const nav = document.querySelector('nav');
-        const acceuil = document.querySelector('#Acceuil');
+        const acceuil = document.querySelector('#acceuil');
         const contact= document.querySelector('#contact');
         const info= document.querySelector('#info');
 

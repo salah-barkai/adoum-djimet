@@ -71,22 +71,26 @@
             }
 
             nav ul {
-                display: none;
-                flex-direction: column;
-                background-color: whitesmoke;
-                height: 100%;
-                width: 100%;
-                padding: auto;
-                margin: auto;
-                overflow: auto;
-                opacity: 1;
-                transition: ease 2.0;
-            }
+                    display: none; /* Caché par défaut sur les petits écrans */
+                    flex-direction: column;
+                    background-color: black;
+                    width: 100%;
+                    margin: 0;
+                    color: white;
+                    /* Réinitialiser les marges */
+                }
 
-            nav.show {
-                display: flex;
-                flex-direction: row; /* Ajout de cette ligne pour afficher en flex row */
-            }
+                nav.show ul {
+                    display: flex; 
+                    opacity: 1;
+                    height: 100%;
+                    padding: 100px; 
+                    background-color: black;
+                    /* Afficher lorsque la classe 'show' est active */
+                }
+
+
+
 
 
             .burger {
@@ -104,6 +108,7 @@
 
 
             }
+            
 
         }
 
@@ -113,13 +118,25 @@
             }
 
             nav ul {
-                padding: 0px 30px;
-            }
+                    display: none; /* Caché par défaut sur les petits écrans */
+                    flex-direction: column;
+                    background-color: black;
+                    width: 100%;
+                    margin: 0;
+                    color: white;
+                    /* Réinitialiser les marges */
+                }
 
-            nav.show {
-            display: flex;
-            flex-direction: row; /* Ajout de cette ligne pour afficher en flex row */
-             }
+                nav.show ul {
+                    display: flex; 
+                    opacity: 1;
+                    height: 100%;
+                    padding: 100px; 
+                    background-color: black;
+                    /* Afficher lorsque la classe 'show' est active */
+                }
+
+
 
 
             .burger {
@@ -306,26 +323,27 @@
 
     <script>
         const burger = document.querySelector('.burger');
-        const nav = document.querySelector('nav ul');
-        const Acceuil = document.querySelector('Acceuil');
-        var contact= document.querySelector('.contact');
-        var info= document.querySelector('#info');
+        const nav = document.querySelector('nav');
+        const acceuil = document.querySelector('#acceuil');
+        const contact= document.querySelector('#contact');
+        const info= document.querySelector('#info');
 
-
-        burger.addEventListener('click', () => {
-            nav.classList.toggle('show')
-        })
+        burger.addEventListener('click', ()=>{
+            nav.classList.toggle('show');
+        });
+        
 
         acceuil.addEventListener('click', () =>{
-            window.location.href ='./index.html';
-        });
+            window.location.href = './index.html';
+          });
+
 
         contact.addEventListener('click', () =>{
-            window.location.href='./contact.html';
+            window.location.href = './contact.html';
         });
 
-        info.addEventListener('click', ()=> {
-            window.location.href = 'activité.html';
+        info.addEventListener('click', () =>{
+            window.location.href='./activité.html';
         });
 
 
