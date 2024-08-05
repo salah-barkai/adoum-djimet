@@ -244,6 +244,19 @@
 
         }
 
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin: auto;
+            padding: 10px;
+            font-size: 40px;
+            cursor: pointer;
+            text-decoration: none;
+            color: black;
+
+        }
         ion-icon {
             display: flex;
             justify-content: center;
@@ -253,6 +266,8 @@
             padding: 10px;
             font-size: 40px;
             cursor: pointer;
+
+
         }
 
         ion-icon:hover {
@@ -289,15 +304,15 @@
       <br>
     </div>
     <div class="contact">
-       <ion-icon name="logo-facebook"></ion-icon>
-       <ion-icon name="logo-instagram"></ion-icon>
-       <ion-icon name="logo-twitter"></ion-icon>
+       <a href="https://www.facebook.com/adoumdjim?mibextid=LQQJ4d"><ion-icon name="logo-facebook"></ion-icon></a>
+       <a href="https://www.instagram.com/adoumdjimet?igsh=MXNmbHdmcWRmMG1tdA=="><ion-icon name="logo-instagram"></ion-icon></a>
+       <a href="https://x.com/adoumdjimet55?s=21"><ion-icon name="logo-twitter"></ion-icon></a>
        <ion-icon name="mail-outline"></ion-icon>
     </div>
 
     <div class="formu">
         <h1>Formulaire de contact</h1>
-        <form>
+        <form id="contact-form">
             <input type="text" name="Nom" placeholder="Nom">
             <input type="text" name="Prenom" placeholder="Prenom">
             <input type="text" name="email" placeholder="Email">
@@ -320,7 +335,7 @@
 
 
     <!-- Your content goes here -->
-
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3.2.0/dist/email.min.js"></script>
     <script>
         const burger = document.querySelector('.burger');
         const nav = document.querySelector('nav');
@@ -345,6 +360,25 @@
         info.addEventListener('click', () =>{
             window.location.href='./activité.html';
         });
+
+
+        (function() {
+            emailjs.init('AvooARvU23LxVXK0f'); // Replace 'YOUR_USER_ID' with your actual user ID
+        })();
+
+
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            emailjs.sendForm('service_ho9sfij', 'template_pgl8z0c', this)
+                .then(function() {
+                    alert('Message envoyé avec succès!');
+                }, function(error) {
+                    alert('Échec de l\'envoi du message: ' + JSON.stringify(error));
+                });
+        });
+
+
 
 
 
